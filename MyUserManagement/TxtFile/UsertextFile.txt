@@ -1,0 +1,18 @@
+Aan  Maria is 22 old. It is a Man. He has the following roles  Manager, Employee, Admin
+
+Niveda  Abhi is 23 old. It is a Women. He has the following roles  Manager, Admin
+
+Aadu  Abhi is 30 old. It is a Women. He has the following roles  Employee, Admin
+
+Vaibhav  Ash is 48 old. It is a Man. He has the following roles  Admin
+
+Gokul  Rai is 35 old. It is a Man. He has the following roles  Manager, Employee
+
+Mary  Wayne is 29 old. It is a Women. He has the following roles  Manager
+
+Eric  John is 30 old. It is a Man. He has the following roles  Employee, Admin
+
+Janifer  Watler is 21 old. It is a Women. He has the following roles  Manager, Admin
+
+Joal  Shanmuk is 35 old. It is a Man. He has the following roles  Manager, Employee, Admin
+

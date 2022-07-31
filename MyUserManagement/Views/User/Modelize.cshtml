@@ -1,0 +1,205 @@
+﻿@model IEnumerable<MyUserManagement.Data.Model.UserModel>
+
+    @{
+
+    Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Modelize</title>
+
+    </head>
+    <h1 style="text-align:center;font-size:30px;">USER DETAILS </h1>
+    <body>
+        <p>
+            <a asp-action="Create">Create New</a><br />
+            <a asp-action="Modelize">User Details</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr style="border-color:gray;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Firstname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Lastname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Age)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr style="border-color:gray;border-width:thin;">
+                    <td style="border-color:gray;">
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Firstname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Lastname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <button type="button" onclick="btnAgelessthan25()" style="        cursor: pointer;
+        top: 240px;
+        width: 125px;
+        height: 35px;
+        background: #0581C1 0% 0% no-repeat padding-box;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        border-color: #069BD7;
+        font-size: 13px;
+        font-family: Open Sans;
+        font-weight: bold;">
+                        Women Having Age < 25
+                    </button>
+
+
+                </td>
+                <td>
+                    <button type="button" onclick="YoungestMan()" style="        cursor: pointer;
+        top: 240px;
+        width: 125px;
+        height: 35px;
+        background: #0581C1 0% 0% no-repeat padding-box;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        border-color: #069BD7;
+        font-size: 13px;
+        font-family: Open Sans;
+        font-weight: bold;">
+                        Youngest Man
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="AllManagersNameHavingNamewithJO()" style="        cursor: pointer;
+        top: 240px;
+        width: 125px;
+        height: 35px;
+        background: #0581C1 0% 0% no-repeat padding-box;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        border-color: #069BD7;
+        font-size: 13px;
+        font-family: Open Sans;
+        font-weight: bold;">
+                        Managers Name with JO
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="AllWomenRoleinManagerandAdmin()" style="        cursor: pointer;
+        top: 240px;
+        width: 125px;
+        height: 35px;
+        background: #0581C1 0% 0% no-repeat padding-box;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        border-color: #069BD7;
+        font-size: 13px;
+        font-family: Open Sans;
+        font-weight: bold;">
+                        Women Role in Manager and Admin
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="MenhavingAgegraterthan40()" style="        cursor: pointer;
+        top: 240px;
+        width: 125px;
+        height: 35px;
+        background: #0581C1 0% 0% no-repeat padding-box;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        border-color: #069BD7;
+        font-size: 13px;
+        font-family: Open Sans;
+        font-weight: bold;">
+                        Men having Age > 40
+                    </button>
+                </td>
+                <td>
+                    <button type="button" onclick="Writefile()" style="        cursor: pointer;
+        top: 240px;
+        width: 125px;
+        height: 35px;
+        background: #0581C1 0% 0% no-repeat padding-box;
+        color: white;
+        border-radius: 4px;
+        opacity: 1;
+        border-color: #069BD7;
+        font-size: 13px;
+        font-family: Open Sans;
+        font-weight: bold;">
+                      Write File
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+
+
+        <script>
+        function btnAgelessthan25() {
+        window.location.href = "@Url.Action("GetWomenhavingAgelessthan25", "User")";
+       
+        };
+
+        function YoungestMan() {
+         window.location.href = "@Url.Action("GetYoungestMan", "User")";
+        
+        };
+
+        function AllManagersNameHavingNamewithJO() {
+         window.location.href = "@Url.Action("AllManagersNameHavingNamewithJO", "User")";
+       
+        };
+
+        function AllWomenRoleinManagerandAdmin() {
+         window.location.href = "@Url.Action("AllWomenRoleinManagerandAdmin", "User")";
+       
+        };
+
+        function MenhavingAgegraterthan40() {
+         window.location.href = "@Url.Action("MenhavingAgegraterthan40", "User")";
+       
+        };
+
+            function Writefile() {
+         window.location.href = "@Url.Action("Writefile", "User")";
+       
+        };
+        </script>
+    </body>
+</html>
